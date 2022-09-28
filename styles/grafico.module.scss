@@ -1,0 +1,51 @@
+.container{
+    width: 50%;
+}
+
+.progress{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: conic-gradient(rgb(107, 235, 211), rgb(105, 211, 229) 0deg, rgb(205 205 205 / 40%) 0deg);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::after{
+        position: absolute;
+        content: '';
+        width: 210px;
+        height: 210px;
+        border-radius: 50%;
+        background: #fbf9f3;
+    }
+}
+
+.value{
+    color: #212121;
+    z-index: 5;
+    font-size: 5rem;
+}
+
+
+@media screen and (max-width: 768px) {
+    .progress{
+        width: 180px;
+        height: 180px;
+        &::after{
+            width: 150px;
+            height: 150px;
+        }
+    }
+
+    .value{
+        font-size: 4rem;
+    }
+}
+
+@media screen and (max-width: 515px){
+    .container{
+        width: 100%;
+    }
+}

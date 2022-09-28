@@ -1,0 +1,99 @@
+.pageLogin{
+    width: 100%;
+    min-height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: stretch;
+}
+.centradoLogin{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(315deg, #7f1431, #520f21);
+}
+.divLogin{
+    width: 50%;
+    margin: auto;
+}
+
+.mainLogin{
+    max-width: 550px;
+    width: 100%;
+}
+
+.headerLogin{
+    text-align: center;
+    h1{
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #7f1431;
+        text-transform: uppercase;
+        
+    }
+}
+
+.contentLogin{
+    width: 80%;
+    max-width: 375px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    h2{
+        text-align: left;
+        margin: 0;
+        font-size: 2rem;
+        font-weight: 500;
+        
+    }
+   
+}
+
+.footerBottom{
+    position:absolute;
+    bottom: 0;
+    
+    width: 50%;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .pageLogin{
+        flex-direction: column;
+    }
+
+    .centradoLogin{
+        width: 100%;
+        padding: 50px;
+    }
+    
+    .divLogin{
+        width: 100%;
+    }
+
+    .mainLogin{
+        width: 90%;
+    }
+
+    .headerLogin{
+        h1{
+            font-size: 2rem;
+        }
+    }
+
+    .contentLogin{
+    width: 90%;
+    margin-top: 30px;
+        h2{
+            font-size: 1.5rem;
+        }
+    }
+    
+    .footerBottom{
+        width: 100%;
+    }
+   
+}
