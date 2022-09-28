@@ -13,7 +13,7 @@ import { authOptions } from "./api/auth/[...nextauth]";
 import { unstable_getServerSession } from "next-auth/next";
 import Head from "next/head";
 
-export default function login({ providers, session }) {
+export default function Login({ providers, session }) {
   const router = useRouter();
 
   useEffect(() => {
