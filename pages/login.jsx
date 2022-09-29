@@ -29,9 +29,54 @@ export default function Login({ providers, session }) {
         <title>Álbum Mundial 2022 - Login</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="theme-color" content="#520f21"></meta>
+
+        <meta
+          name="description"
+          content="Web para el control de figuritas del álbum del mundial de futbol Qatar 2022. "
+        />
+
+        <meta
+          property="og:url"
+          content="https://mundial-album-au16.vercel.app/"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Álbum Mundial 2022 - Login" />
+        <meta
+          property="og:description"
+          content="Web para el control de figuritas del álbum del mundial de futbol Qatar 2022. "
+        />
+        <meta
+          property="og:image"
+          content="https://mundial-album-au16.vercel.app/webPrevia.png"
+        />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          property="twitter:domain"
+          content="mundial-album-au16.vercel.app"
+        />
+        <meta
+          property="twitter:url"
+          content="https://mundial-album-au16.vercel.app/"
+        />
+        <meta name="twitter:title" content="Álbum Mundial 2022 - Login" />
+        <meta
+          name="twitter:description"
+          content="Web para el control de figuritas del álbum del mundial de futbol Qatar 2022. "
+        />
+        <meta
+          name="twitter:image"
+          content="https://mundial-album-au16.vercel.app/webPrevia.png"
+        />
       </Head>
       <div className={styles.centradoLogin}>
-        <Image src={"/Login.svg"} width={300} height={359} priority></Image>
+        <Image
+          src={"/Login.svg"}
+          width={300}
+          height={359}
+          priority
+          alt="Logo mundial"
+        ></Image>
       </div>
 
       <div className={styles.divLogin}>
