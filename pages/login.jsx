@@ -35,10 +35,7 @@ export default function Login({ providers, session }) {
           content="Web para el control de figuritas del álbum del mundial de futbol Qatar 2022. "
         />
 
-        <meta
-          property="og:url"
-          content="https://mundial-album-au16.vercel.app/"
-        />
+        <meta property="og:url" content="https://mundial-album.vercel.app/" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Álbum Mundial 2022 - Login" />
         <meta
@@ -47,17 +44,14 @@ export default function Login({ providers, session }) {
         />
         <meta
           property="og:image"
-          content="https://mundial-album-au16.vercel.app/webPrevia.png"
+          content="https://mundial-album.vercel.app/webPrevia.png"
         />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          property="twitter:domain"
-          content="mundial-album-au16.vercel.app"
-        />
+        <meta property="twitter:domain" content="mundial-album.vercel.app" />
         <meta
           property="twitter:url"
-          content="https://mundial-album-au16.vercel.app/"
+          content="https://mundial-album.vercel.app/"
         />
         <meta name="twitter:title" content="Álbum Mundial 2022 - Login" />
         <meta
@@ -66,7 +60,7 @@ export default function Login({ providers, session }) {
         />
         <meta
           name="twitter:image"
-          content="https://mundial-album-au16.vercel.app/webPrevia.png"
+          content="https://mundial-album.vercel.app/webPrevia.png"
         />
       </Head>
       <div className={styles.centradoLogin}>
