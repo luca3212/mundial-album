@@ -17,6 +17,10 @@ export default function Login({ providers, session }) {
   const router = useRouter();
 
   useEffect(() => {
+    if (session) return router.push("/");
+  }, [session]);
+
+  useEffect(() => {
     if (router.query.error) {
       router.push("/login");
     }
@@ -101,13 +105,13 @@ export async function getServerSideProps(context) {
     authOptions
   );
 
-  if (session)
-    return {
-      redirect: {
-        destination: "/",
-        permanent: false,
-      },
-    };
+  // if (session)
+  //   return {
+  //     redirect: {
+  //       destination: "/",
+  //       permanent: false,
+  //     },
+  //   };
 
   return {
     props: {

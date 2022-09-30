@@ -157,7 +157,7 @@ export default function Home({ session }) {
   );
 }
 
-export const getServerSideProps = async (context) => {
+export async function getServerSideProps(context) {
   const session = await unstable_getServerSession(
     context.req,
     context.res,
@@ -175,4 +175,4 @@ export const getServerSideProps = async (context) => {
   return {
     props: { session },
   };
-};
+}
