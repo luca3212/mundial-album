@@ -21,6 +21,10 @@ export const authOptions = {
       return Promise.resolve(session);
     },
   },
+  pages: {
+    signIn: "/login",
+    error: "/login",
+  },
 };
 
 export default NextAuth(authOptions);

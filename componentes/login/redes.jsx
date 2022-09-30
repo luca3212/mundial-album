@@ -6,8 +6,7 @@ import Image from "next/image";
 function Redes({ providers }) {
   const { google } = providers;
   return (
-    // <button className={styles.btonSession} onClick={() => signIn(google.id)}>
-    <button className={styles.btonSession} onClick={() => signIn("")}>
+    <button className={styles.btonSession} onClick={() => signIn(google.id)}>
       <Image
         src={"/Google.svg"}
         height={24}
