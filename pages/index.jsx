@@ -4,7 +4,7 @@ import axios from "axios";
 import Head from "next/head";
 
 //Modelo albumVacio
-import { modeloAlbumVacio } from "../pages/api/modelAlbum";
+import { modeloAlbumVacio } from "./api/modelAlbum";
 
 //Autentificacion
 import { authOptions } from "./api/auth/[...nextauth]";
