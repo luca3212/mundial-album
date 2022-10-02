@@ -25,11 +25,19 @@
   justify-content: space-between;
 }
 
+.seccionOpciones{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .filtros{
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: max-content;
+  // width: max-content;
   margin: 0;
   padding: 20px 0;
   gap: 15px;
@@ -38,6 +46,23 @@
 .filtros select{
   padding: 4px 8px;
   font-size: 1.1rem;
+}
+.btonShare{
+  margin: 0;
+  button{
+    padding: 8px;
+    background: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #1d5e97;
+    border: 2px solid #1d5e97;
+    font-weight: 700;
+    cursor: pointer;
+    &:hover{
+      background: #1d5e97;
+      color: #f7f7f7;
+    }
+  }
 }
 
 .footerHome{

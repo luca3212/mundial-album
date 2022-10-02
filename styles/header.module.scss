@@ -36,3 +36,31 @@
     background: rgba(255, 255, 255, 0.2);
 }
 
+@media screen and (max-width: 425px) {
+    .headerHome{
+        flex-direction: column-reverse;
+        padding: 15px 4px;
+        position: relative;
+       
+    }
+
+    .contentUser{
+        width: 100%;
+        flex-direction: column;
+        margin-top: 5px;
+        gap: 5px;
+        div{
+            margin-left: 15px;
+        }
+    }
+
+    .btonSesion{
+        width: 100%;
+        position: absolute;
+        top: 15px;
+        right: 5px;
+        button{
+            margin-right: 10px;
+        }
+    }
+}

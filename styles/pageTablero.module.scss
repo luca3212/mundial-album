@@ -1,0 +1,93 @@
+.mainTablero{
+    width: 96%;
+    max-width: 1100px;
+}
+
+.headerTablero{
+    padding: 15px 0;
+    background-color: #1b588d;
+    color: #f7f7f7;
+}
+
+.contentHeader{
+    max-width: 1100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    h1{
+        margin: 0;
+        font-weight: 500;
+        font-size: 1.6rem;
+    }
+
+    a{
+        margin: 0;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: 400;
+        font-size: 1.2rem;
+        color: #f7f7f7;
+        background: rgba(255, 255, 255, 0.2);
+    }
+}
+
+.titlePage{
+    margin: 20px 0;
+}
+
+.contentAlbum{
+    // max-width: 1100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.btonFloat{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin-right: 50px;
+    margin-bottom: 50px;
+  }
+
+@media screen and (max-width: 1100px) {
+    .contentHeader{
+        width: 96%;
+        
+    }
+    .btonFloat{
+        margin-right: 30px;
+        margin-bottom: 30px;
+      }
+}
+
+@media screen and (max-width: 425px) {
+    .titlePage{
+        margin: 10px 0;
+    }
+    .contentHeader{
+        gap: 10px;
+        h1{
+            
+            font-size: 1.4rem;
+        }
+        
+        a{
+           
+            font-size: 1.2rem;
+           
+        }
+        
+    }
+    .btonFloat{
+        margin-right: 15px;
+        margin-bottom: 15px;
+      }
+    
+}
+
+

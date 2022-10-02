@@ -28,7 +28,7 @@ export default function HeaderHome({ dataUser }) {
         </div>
       </div>
 
-      <div>
+      <div className={styles.btonSesion}>
         <button className={styles.btonOut} onClick={() => signOut()}>
           <Image src={"/logout.svg"} width={24} height={24} />
           Cerrar Sesión

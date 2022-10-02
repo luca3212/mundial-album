@@ -167,5 +167,22 @@
             font-size: 1.5rem;
         }
     }
+
+    .bodyCard{
+        grid-template-columns: repeat(auto-fill, 60px);
+    }
+    .btonFigurita,.btonFiguritaActiva{
+        height: 50px;
+        width: 50px;
+        font-size: 1rem;
+    }
+
+    .itemRepetida{
+        right: -8px;
+        border: 2px solid #f1f1f1;
+        width: 25px;
+        height: 25px;
+    }
+
 }
 

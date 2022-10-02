@@ -68,6 +68,20 @@ const AlbumProvider = ({ children }) => {
     return filtroFinal;
   }
 
+  //funcion filtrar Repetida parametro
+  function filtrarRepetidaParams(entradaAlbum) {
+    const primerFiltro = entradaAlbum.map(function (pais) {
+      return {
+        ...pais,
+        figus: pais.figus.filter((figu) => figu.esRepetida == true),
+      };
+    });
+
+    const filtroFinal = primerFiltro.filter((pais) => pais.figus.length != 0);
+
+    return filtroFinal;
+  }
+
   return (
     <AlbumContext.Provider
       value={{
@@ -82,6 +96,7 @@ const AlbumProvider = ({ children }) => {
         sincronizar,
         filtrarFalta,
         filtrarRepetida,
+        filtrarRepetidaParams,
       }}
     >
       {children}
