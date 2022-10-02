@@ -59,7 +59,7 @@ export default function Tablero({ dataAlbum }) {
         <BtonTop />
       </div>
 
-      <footer>
+      <footer className={styles.footerHome}>
         <Footer></Footer>
       </footer>
     </div>
