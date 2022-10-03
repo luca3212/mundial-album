@@ -3,6 +3,8 @@ import ModalPortal from "../Modal";
 import styles from "../../styles/editar.module.scss";
 import Image from "next/image";
 
+import { motion } from "framer-motion";
+
 //APIcontext
 import { AlbumContext } from "../../contexts/AlbumContext";
 import { useContext } from "react";
@@ -74,7 +76,12 @@ export default function Edit() {
 
   return (
     <ModalPortal>
-      <div className={styles.contentCard}>
+      <motion.div
+        key={pais.id}
+        className={styles.contentCard}
+        initial={{ opacity: 0, y: 0, scale: 0.2 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
+      >
         <div className={styles.headCard}>
           <div className={styles.imgCard}>
             <Image
@@ -124,7 +131,7 @@ export default function Edit() {
           </button>
           <button onClick={() => setVentanaMod(false)}>Cancelar</button>
         </div>
-      </div>
+      </motion.div>
     </ModalPortal>
   );
 }

@@ -1,12 +1,37 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styles from "../../styles/Card.module.scss";
 import Image from "next/image";
-
+import { motion } from "framer-motion";
 export default function CardTablero({ props }) {
   const { id, nombre, abre, cantidad, figus } = props;
 
+  const container = {
+    hidden: { opacity: 1, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.15,
+      },
+    },
+  };
+
+  const efect = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+    },
+  };
+
   return (
-    <div className={styles.contentCard}>
+    <motion.div
+      className={styles.contentCard}
+      variants={container}
+      initial="hidden"
+      animate="visible"
+    >
       <div className={styles.headCard}>
         <div className={styles.imgCard}>
           <Image
@@ -14,7 +39,6 @@ export default function CardTablero({ props }) {
             height={40}
             width={50}
             quality={100}
-            // priority={abre == "FWC"}
           />
         </div>
         <div className={styles.infoCard}>
@@ -25,18 +49,17 @@ export default function CardTablero({ props }) {
 
       <div className={styles.bodyCard}>
         {figus.map((item) => (
-          <div key={item.idFigurita} className={styles.contentBton}>
-            <button className={styles.btonFiguritaActiva}>
+          <motion.div
+            key={item.idFigurita}
+            className={styles.contentBton}
+            variants={efect}
+          >
+            <button className={styles.btonFigurita} style={{ fontWeight: 500 }}>
               {item.idFigurita}
             </button>
-            {item.esRepetida && (
-              <div className={styles.itemRepetida}>
-                <p>{item.nroRepetida}</p>
-              </div>
-            )}
-          </div>
+          </motion.div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }

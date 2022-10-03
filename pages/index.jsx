@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import styles from "../styles/Home.module.scss";
 import axios from "axios";
 import Head from "next/head";
-
+import { AnimatePresence } from "framer-motion";
 //Modelo albumVacio
 import { modeloAlbumVacio } from "./api/modelAlbum";
 
@@ -67,7 +67,7 @@ export default function Home({ session }) {
         <title>Álbum Mundial 2022</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="theme-color" content="#1b588d"></meta>
-
+        <link rel="icon" type="image/x-icon" href="/flag/FWC.svg"></link>
         <meta
           name="description"
           content="Web para el control de figuritas del álbum del mundial de futbol Qatar 2022. "
@@ -133,8 +133,13 @@ export default function Home({ session }) {
             <h1>Estadísticas</h1>
           </div>
         </div>
-
-        {ventanaAlbum ? <AlbumSeccion /> : <EstadisticasSection />}
+        <AnimatePresence mode={"wait"} initial={true}>
+          {ventanaAlbum ? (
+            <AlbumSeccion key={"album"} />
+          ) : (
+            <EstadisticasSection key={"estadistica"} />
+          )}
+        </AnimatePresence>
       </main>
 
       <footer className={styles.footerHome}>

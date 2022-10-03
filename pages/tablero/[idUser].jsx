@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Head from "next/head";
 
@@ -20,11 +20,9 @@ import { useContext } from "react";
 export default function Tablero({ dataAlbum }) {
   const { filtrarRepetidaParams } = useContext(AlbumContext);
 
-  const [albumRepetidas, setAlbumRepetidas] = useState([]);
-
-  useEffect(() => {
-    setAlbumRepetidas(filtrarRepetidaParams(dataAlbum[0].listFiguritas));
-  }, [dataAlbum]);
+  const [albumRepetidas, setAlbumRepetidas] = useState(() =>
+    filtrarRepetidaParams(dataAlbum[0].listFiguritas)
+  );
 
   return (
     <div>
@@ -32,6 +30,7 @@ export default function Tablero({ dataAlbum }) {
         <title>Álbum Mundial 2022</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="theme-color" content="#1b588d"></meta>
+        <link rel="icon" type="image/x-icon" href="/flag/FWC.svg"></link>
       </Head>
       <header className={styles.headerTablero}>
         <div className={styles.contentHeader}>

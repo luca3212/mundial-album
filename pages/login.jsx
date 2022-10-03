@@ -35,7 +35,7 @@ export default function Login({ providers, session }) {
         <title>Álbum Mundial 2022 - Login</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="theme-color" content="#520f21"></meta>
-
+        <link rel="icon" type="image/x-icon" href="/flag/FWC.svg"></link>
         <meta
           name="description"
           content="Web para el control de figuritas del álbum del mundial de futbol Qatar 2022. "

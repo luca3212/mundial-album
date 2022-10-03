@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "../styles/estadistica.module.scss";
-
+import { motion } from "framer-motion";
 //API context
 import { AlbumContext } from "../contexts/AlbumContext";
 import { useContext } from "react";
@@ -58,7 +58,12 @@ export default function EstadisticasSection() {
   }
 
   return (
-    <div className={styles.contentEstaditicas}>
+    <motion.div
+      className={styles.contentEstaditicas}
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
+      exit={{ opacity: 0, y: 30, transition: { duration: 0.5 } }}
+    >
       <div className={styles.principalDiv}>
         <div className={styles.contentData}>
           <h2>Álbum Completo</h2>
@@ -84,6 +89,6 @@ export default function EstadisticasSection() {
           </p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

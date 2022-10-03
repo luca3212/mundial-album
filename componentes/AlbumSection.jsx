@@ -5,6 +5,7 @@ import styles from "../styles/Home.module.scss";
 import { AlbumContext } from "../contexts/AlbumContext";
 import { useContext } from "react";
 import { getSession } from "next-auth/react";
+import { motion } from "framer-motion";
 
 export default function AlbumSeccion() {
   const { Album, filtrarFalta, filtrarRepetida } = useContext(AlbumContext);
@@ -56,7 +57,11 @@ export default function AlbumSeccion() {
   }
 
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
+      exit={{ opacity: 0, y: 30, transition: { duration: 0.5 } }}
+    >
       <div className={styles.seccionOpciones}>
         <div className={styles.filtros}>
           <h3>Mostrar:</h3>
@@ -84,6 +89,6 @@ export default function AlbumSeccion() {
           ))
         )}
       </div>
-    </>
+    </motion.div>
   );
 }
