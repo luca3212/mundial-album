@@ -16,7 +16,7 @@ import BtonTop from "../componentes/btonTop";
 import { AlbumContext } from "../contexts/AlbumContext";
 import { useContext } from "react";
 
-export default function comparar({ session }) {
+export default function Comparar({ session }) {
   const { filtrarRepetidaParams, Album, filtrarRepetida, setAlbum } =
     useContext(AlbumContext);
 
