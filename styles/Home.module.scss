@@ -64,6 +64,17 @@
     }
   }
 }
+.btonComparar{
+    padding: 8px;
+    background: #1d5e97;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #f7f7f7;
+    border: 2px solid #1d5e97;
+    font-weight: 700;
+    cursor: pointer;
+    margin-right: 25px;
+}
 
 .footerHome{
   position: absolute;
@@ -90,6 +101,45 @@
     margin-bottom: 30px;
   }
 }
+
+
+@media screen and (max-width: 550px){
+  .seccionOpciones{
+    flex-direction: column-reverse;
+    padding: 15px 0;
+    gap: 15px;
+  }
+
+  .filtros{
+    padding: 0 0 0 2.5%;
+    width: 100%;
+    h3{
+      margin: 0;
+    }
+  }
+  
+  .filtros select{
+    margin: 0;
+  }
+
+  .btonShare{
+    margin: 0;
+    width: 100%;
+    display: flex;
+
+    button{
+      padding: 12px 0;
+      width: 45%;
+    }
+  }
+  .btonComparar{
+    padding: 12px 0;
+    text-align: center;
+    width: 45%;
+    margin: 0 auto;
+  }
+}
+
 
 @media screen and (max-width: 425px) {
   .btonFloat{

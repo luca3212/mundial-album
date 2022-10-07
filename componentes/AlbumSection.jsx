@@ -6,6 +6,7 @@ import { AlbumContext } from "../contexts/AlbumContext";
 import { useContext } from "react";
 import { getSession } from "next-auth/react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function AlbumSeccion() {
   const { Album, filtrarFalta, filtrarRepetida } = useContext(AlbumContext);
@@ -71,7 +72,11 @@ export default function AlbumSeccion() {
             <option value="2">Repetidas</option>
           </select>
         </div>
+
         <div className={styles.btonShare}>
+          <Link href={"/comparar"}>
+            <a className={styles.btonComparar}>Comparar Álbum</a>
+          </Link>
           <button onClick={() => compartir()}>Compartir Repetidas</button>
         </div>
       </div>
