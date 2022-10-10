@@ -15,6 +15,7 @@ import BtonTop from "../componentes/btonTop";
 //APIcontext
 import { AlbumContext } from "../contexts/AlbumContext";
 import { useContext } from "react";
+import Head from "next/head";
 
 export default function Comparar({ session }) {
   const { filtrarRepetidaParams, Album, filtrarRepetida, setAlbum } =
@@ -182,6 +183,16 @@ export default function Comparar({ session }) {
 
   return (
     <div className={styles.mainComparar}>
+      <Head>
+        <title>Álbum Mundial 2022</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="theme-color" content="#1d5e97"></meta>
+        <link rel="icon" type="image/x-icon" href="/flag/FWC.svg"></link>
+        <meta
+          name="description"
+          content="Web para el control de figuritas del álbum del mundial de futbol Qatar 2022. "
+        />
+      </Head>
       <header className={styles.headerForm}>
         <div className={styles.backInicio}>
           <Link href="/">
