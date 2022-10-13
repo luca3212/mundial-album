@@ -2,14 +2,18 @@ import React, { useEffect, useState } from "react";
 import styles from "../styles/grafico.module.scss";
 
 export default function Grafico({ props }) {
-  const [percentage, setPercentage] = useState(0);
+  const [percentage, setPercentage] = useState(0.0);
 
   useEffect(() => {
     setTimeout(() => {
       if (percentage < props) {
-        setPercentage(percentage + 1);
+        if (percentage == 99 && props < 100) {
+          setPercentage(99);
+        } else {
+          setPercentage(percentage + 1);
+        }
       }
-    }, 50);
+    }, 35);
   }, [percentage, props]);
 
   return (
