@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <div className={styles.contentFooter}>
       <p>
-        Copyright &copy; 2024 | Hecho por{" "}
+        Copyright &copy; 2025 | Hecho por{" "}
         <Link href="https://agueroluca.site/">
           <a target="_blank" rel="noreferrer">
             Agüero Luca
